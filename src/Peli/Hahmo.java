@@ -1,4 +1,4 @@
-package tank;
+package Peli;
 
 import java.awt.Color;
 import java.awt.Paint;
@@ -6,7 +6,7 @@ import java.awt.Shape;
 import java.awt.geom.Rectangle2D;
 
 
-public class Char {
+public class Hahmo {
 
     private double x=0;
     private double y=0;
