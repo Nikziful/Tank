@@ -10,8 +10,8 @@ public class Char {
 
     private double x=0;
     private double y=0;
-    private double Size=40;
-    private Paint color=Color.BLUE;
+    private double koko=40;
+    private Paint vari=Color.BLUE;
 
     public double getX() {
         return x;
@@ -29,16 +29,16 @@ public class Char {
         this.y = y;
     }
 
-    public double getSize() {
-        return Size;
+    public double getKoko() {
+        return koko;
     }
 
-    public Paint getColor() {
-        return color;
+    public Paint getVari() {
+        return vari;
     }
     
-    public Shape getSquare() {
-        return new Rectangle2D.Double(x,y,Size,Size);
+    public Shape getNelio() {
+        return new Rectangle2D.Double(x,y,koko,koko);
     }
     
     
