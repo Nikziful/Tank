@@ -10,12 +10,14 @@ import javax.swing.JPanel;
 
 public class Pelipaneeli extends JPanel{
     private Hahmo pelihahmo=new Hahmo();
-    
-    private Shape[] esteet={new Rectangle2D.Double(100,160,100,100), 
-                            new Rectangle2D.Double(300,200,50,50),
-                            new Rectangle2D.Double(0,-10,600,10)
+                                                //X, Y, koko  
+   private Shape[] esteet={new Rectangle2D.Double(0,-10,800,1), //top
+                           new Rectangle2D.Double(-10,0,1,700),  //left
+                           new Rectangle2D.Double(0,669,800,1), //bot
+                           new Rectangle2D.Double(789,0,1,700) //right
     };
-    private Paint estevari=Color.orange;
+    
+    private Paint estevari=Color.DARK_GRAY;
     
     @Override
     protected void paintComponent(Graphics g) {
@@ -39,6 +41,30 @@ public class Pelipaneeli extends JPanel{
     }
     
     public void siirryY(int dy) {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         pelihahmo.setY(pelihahmo.getY()+dy);
         for(Shape este:esteet) {
             if(este.intersects(pelihahmo.getNelio().getBounds2D())) {

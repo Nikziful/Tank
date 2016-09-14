@@ -2,7 +2,6 @@ package Peli;
 
 import Peli.Nappainkonfiguraatio;
 import Peli.Pelipaneeli;
-import Peli.Toiminto;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
@@ -16,7 +15,7 @@ public class PeliIkkuna extends JFrame {
     PeliIkkuna(Nappainkonfiguraatio nappis) {
         this.nappaimisto = nappis;
         this.add(paneeli);
-        this.setSize(600, 400);
+        this.setSize(796, 698);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
 
