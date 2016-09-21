@@ -16,9 +16,8 @@ public class Pelipaneeli extends JPanel{
                            new Rectangle2D.Double(0,669,800,1), //bot
                            new Rectangle2D.Double(789,0,1,700) //right
     };
-    
     private Paint estevari=Color.DARK_GRAY;
-    
+ 
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -27,8 +26,7 @@ public class Pelipaneeli extends JPanel{
         for(Shape este:esteet) {
             g2.fill(este);
         }
-        g2.setPaint(pelihahmo.getVari());
-        g2.fill(pelihahmo.getNelio());
+       g2.drawImage(pelihahmo.getAktiivinenKuva(),(int)pelihahmo.getX(), (int)pelihahmo.getY(),this); 
     }
     
     public void suoritaToiminto(Toiminto toiminto) {
@@ -40,51 +38,29 @@ public class Pelipaneeli extends JPanel{
         };
     }
     
-    public void siirryY(int dy) {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+   public void siirryY(int dy) {
         pelihahmo.setY(pelihahmo.getY()+dy);
         for(Shape este:esteet) {
-            if(este.intersects(pelihahmo.getNelio().getBounds2D())) {
+            if(este.intersects(pelihahmo.getEnnakoivaNelio(0,dy).getBounds2D())) {
                 pelihahmo.setY(pelihahmo.getY()-dy);
                 repaint();
                 return;
             }
         }
+        pelihahmo.paivitaY(dy);
         repaint();
     }
     
     public void siirryX(int dx){
         pelihahmo.setX(pelihahmo.getX()+dx);
         for(Shape este:esteet) {
-            if(este.intersects(pelihahmo.getNelio().getBounds2D())){
+            if(este.intersects(pelihahmo.getEnnakoivaNelio(dx,0).getBounds2D())){
                 pelihahmo.setX(pelihahmo.getX()-dx);
                 repaint();
                 return;
             }
         }
+        pelihahmo.paivitaX(dx);
         repaint();
     }
     

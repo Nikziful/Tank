@@ -1,7 +1,5 @@
 package Peli;
 
-import Peli.Nappainkonfiguraatio;
-import Peli.Pelipaneeli;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
@@ -41,3 +39,4 @@ public class PeliIkkuna extends JFrame {
         });
     }
 }
+ 
