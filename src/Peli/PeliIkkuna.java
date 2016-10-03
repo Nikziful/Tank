@@ -9,6 +9,7 @@ public class PeliIkkuna extends JFrame {
 
     private final Pelipaneeli paneeli = new Pelipaneeli();
     private Nappainkonfiguraatio nappaimisto;
+    
 
     PeliIkkuna(Nappainkonfiguraatio nappis) {
         this.nappaimisto = nappis;

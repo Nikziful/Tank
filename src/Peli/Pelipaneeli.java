@@ -35,6 +35,7 @@ public class Pelipaneeli extends JPanel{
        g2.drawImage(pelihahmo.getAktiivinenKuva(),(int)pelihahmo.getX(), (int)pelihahmo.getY(),this); 
     }
     
+    
     public void suoritaToiminto(Toiminto toiminto) {
         switch(toiminto) {
             case ALAS:siirryY(10);break;
