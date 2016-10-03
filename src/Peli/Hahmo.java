@@ -8,14 +8,17 @@ import java.awt.image.BufferedImage;
 public class Hahmo {
     private double x=0;
     private double y=0;    
-//    private double koko=40;
-//    private Paint vari=Color.BLUE;
-    private BufferedImage kuvaVasen=Kuvavarasto.getKuva("TL");
-    private BufferedImage kuvaOikea=Kuvavarasto.getKuva("TR");
-    private BufferedImage kuvaYlos=Kuvavarasto.getKuva("TU");
-    private BufferedImage kuvaAlas=Kuvavarasto.getKuva("TD");
+
+    private BufferedImage kuvaVasen=Kuvavarasto.getKuva("TankLeft");
+    private BufferedImage kuvaOikea=Kuvavarasto.getKuva("TankRight");
+    private BufferedImage kuvaYlos=Kuvavarasto.getKuva("TankUp");
+    private BufferedImage kuvaAlas=Kuvavarasto.getKuva("TankDown");
     private BufferedImage aktiivinenKuva=kuvaOikea;
+    
     private boolean oikeaJalka=true;
+    private boolean ylosJalka=true;
+    private boolean alasJalka=true;
+    private boolean vasenJalka=true;
     
     
     public double getX() {
@@ -25,7 +28,7 @@ public class Hahmo {
     public void setX(double x) {
         this.x = x;
     }
-
+    
     public double getY() {
         return y;
     }
@@ -36,32 +39,54 @@ public class Hahmo {
     
     public void paivitaY(double dy) {
         this.y+=dy;
-        paivitaJalka();
+        paivitaJalkaY();
     }
+    
+    public void paivitaYY(double dy) {
+        this.y+=dy;
+        paivitaJalkaYY();
+    }
+    
+    
     
     public void paivitaX(double dx) {
         this.x+=dx;
-        paivitaJalka();
+        paivitaJalkaX();
+    }
+    
+    public void paivitaXX(double dx) {
+        this.x+=dx;
+        paivitaJalkaX();
     }
     
     
+    private void paivitaJalkaY() {
+        ylosJalka=!ylosJalka;
+        aktiivinenKuva=ylosJalka?kuvaYlos:kuvaYlos;
+    }
     
-    private void paivitaJalka() {
+    private void paivitaJalkaYY() {
+        alasJalka=!alasJalka;
+        aktiivinenKuva=alasJalka?kuvaAlas:kuvaAlas;
+    }
+    
+  
+    
+    
+    private void paivitaJalkaX() {
         oikeaJalka=!oikeaJalka;
-        aktiivinenKuva=oikeaJalka?kuvaOikea:kuvaVasen;
+        aktiivinenKuva=oikeaJalka?kuvaOikea:kuvaOikea;
     }
+    
+     private void paivitaJalkaXX() {
+        vasenJalka=!vasenJalka;
+        aktiivinenKuva=vasenJalka?kuvaVasen:kuvaVasen;
+    }
+    
     public BufferedImage getAktiivinenKuva() {
         return aktiivinenKuva;
     }
 
-//    public double getKoko() {
-//        return koko;
-//    }
-//
-//    public Paint getVari() {
-//        return vari;
-//    }
-//    
     public Shape getNelio() {
         return new Rectangle2D.Double(x,y,aktiivinenKuva.getWidth(),aktiivinenKuva.getHeight());
     }

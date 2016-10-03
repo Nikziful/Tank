@@ -15,7 +15,7 @@ public class Kuvavarasto {
     }
     
     private Kuvavarasto() {
-        //jotta ei voi tehdä oliota
+        
     }
     public static BufferedImage getKuva(String nimi){
         return kuvat.get(nimi);
