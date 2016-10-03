@@ -14,7 +14,13 @@ public class Pelipaneeli extends JPanel{
    private Shape[] esteet={new Rectangle2D.Double(0,-10,800,1), //top
                            new Rectangle2D.Double(-10,0,1,700),  //left
                            new Rectangle2D.Double(0,669,800,1), //bot
-                           new Rectangle2D.Double(789,0,1,700) //right
+                           new Rectangle2D.Double(789,0,1,700), //right
+                           new Rectangle2D.Double(50,0,25,80), //vasen ylä este
+                           new Rectangle2D.Double(200,75,350,25), //ylä keski este
+                           new Rectangle2D.Double(700,580,25,80), //ala oikea este =))
+                           new Rectangle2D.Double(200,580,350,25), //ala keski este
+                           new Rectangle2D.Double(280,280,250,15), //keski
+                           new Rectangle2D.Double(390,150,15,250)
     };
     private Paint estevari=Color.DARK_GRAY;
  
@@ -28,6 +34,7 @@ public class Pelipaneeli extends JPanel{
         }
        g2.drawImage(pelihahmo.getAktiivinenKuva(),(int)pelihahmo.getX(), (int)pelihahmo.getY(),this); 
     }
+    
     
     public void suoritaToiminto(Toiminto toiminto) {
         switch(toiminto) {
