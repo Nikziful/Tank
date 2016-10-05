@@ -71,6 +71,13 @@ public class Menu extends JFrame {
             }
         });
         
+        ohjeNappi.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                new OpetusIkkuna().setVisible(true);
+                dispose();
+            }
+        });
+        
         pelaaNappi.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                Nappainkonfiguraatio nappaimisto=new Nappainkonfiguraatio();

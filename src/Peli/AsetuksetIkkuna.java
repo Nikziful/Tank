@@ -33,7 +33,9 @@ public class AsetuksetIkkuna extends JFrame{
         botRowX.addComponent(vaikeusNappi, 200, 200, 200);
         
         GroupLayout.SequentialGroup lowestRowX = layout.createSequentialGroup();
+        lowestRowX.addGap(137);
         lowestRowX.addComponent(takasNappi);
+        
         GroupLayout.ParallelGroup baseX = layout.createParallelGroup();
         baseX.addGroup(topRowX);
         baseX.addGroup(midRowX);
