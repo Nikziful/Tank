@@ -30,11 +30,12 @@ public class PeliIkkuna extends JFrame {
             @Override
             public void run() {
                 Nappainkonfiguraatio nappaimisto=new Nappainkonfiguraatio();
-                nappaimisto.lisaaNappain(KeyEvent.VK_RIGHT, Toiminto.OIKEA);
                 nappaimisto.lisaaNappain(KeyEvent.VK_D, Toiminto.OIKEA);
-                nappaimisto.lisaaNappain(KeyEvent.VK_LEFT, Toiminto.VASEN);
-                nappaimisto.lisaaNappain(KeyEvent.VK_UP, Toiminto.YLOS);
-                nappaimisto.lisaaNappain(KeyEvent.VK_DOWN, Toiminto.ALAS);
+                nappaimisto.lisaaNappain(KeyEvent.VK_A, Toiminto.VASEN);
+                nappaimisto.lisaaNappain(KeyEvent.VK_W, Toiminto.YLOS);
+                nappaimisto.lisaaNappain(KeyEvent.VK_S, Toiminto.ALAS);
+                //nappaimisto.lisaaNappain(KeyEvent.VK_Q, Toiminto.AMPUU);
+                //nappaimisto.lisaaNappain(KeyEvent.VK_E, Toiminto.AMPUU);
                 new PeliIkkuna(nappaimisto).setVisible(true);
             }
         });

@@ -39,49 +39,54 @@ public class Hahmo {
     
     public void paivitaY(double dy) {
         this.y+=dy;
-        paivitaJalkaY();
+        if (dy<0) {
+        aktiivinenKuva=kuvaYlos; }
+        else {
+            aktiivinenKuva=kuvaAlas;
+        }
     }
     
-    public void paivitaYY(double dy) {
-        this.y+=dy;
-        paivitaJalkaYY();
-    }
+
+    
     
     
     
     public void paivitaX(double dx) {
         this.x+=dx;
-        paivitaJalkaX();
+        
+        if (dx<0) {
+        aktiivinenKuva=kuvaVasen; }
+        else {
+            aktiivinenKuva=kuvaOikea;
+        }
     }
     
-    public void paivitaXX(double dx) {
-        this.x+=dx;
-        paivitaJalkaX();
-    }
     
+  
     
     private void paivitaJalkaY() {
-        ylosJalka=!ylosJalka;
-        aktiivinenKuva=ylosJalka?kuvaYlos:kuvaYlos;
+        
+        aktiivinenKuva=kuvaYlos;
     }
     
     private void paivitaJalkaYY() {
-        alasJalka=!alasJalka;
-        aktiivinenKuva=alasJalka?kuvaAlas:kuvaAlas;
+        
+        
     }
     
   
     
     
     private void paivitaJalkaX() {
-        oikeaJalka=!oikeaJalka;
-        aktiivinenKuva=oikeaJalka?kuvaOikea:kuvaOikea;
+       
+        aktiivinenKuva=kuvaOikea;
     }
     
      private void paivitaJalkaXX() {
-        vasenJalka=!vasenJalka;
-        aktiivinenKuva=vasenJalka?kuvaVasen:kuvaVasen;
-    }
+        
+        aktiivinenKuva=kuvaVasen;
+     }
+
     
     public BufferedImage getAktiivinenKuva() {
         return aktiivinenKuva;
