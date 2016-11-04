@@ -86,9 +86,9 @@ public class Menu extends JFrame {
                 nappaimisto.lisaaNappain(KeyEvent.VK_UP, Toiminto.YLOS);
                 nappaimisto.lisaaNappain(KeyEvent.VK_DOWN, Toiminto.ALAS);
                 nappaimisto.lisaaNappain(KeyEvent.VK_D, Toiminto.OIKEA);
-                nappaimisto.lisaaNappain(KeyEvent.VK_D, Toiminto.OIKEA);
-                nappaimisto.lisaaNappain(KeyEvent.VK_D, Toiminto.OIKEA);
-                nappaimisto.lisaaNappain(KeyEvent.VK_D, Toiminto.OIKEA);
+                nappaimisto.lisaaNappain(KeyEvent.VK_S, Toiminto.ALAS);
+                nappaimisto.lisaaNappain(KeyEvent.VK_A, Toiminto.VASEN);
+                nappaimisto.lisaaNappain(KeyEvent.VK_W, Toiminto.YLOS);
                 new PeliIkkuna(nappaimisto).setVisible(true);
                 dispose();
             }
