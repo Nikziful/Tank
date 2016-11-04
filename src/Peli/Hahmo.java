@@ -69,10 +69,7 @@ public class Hahmo {
         aktiivinenKuva=kuvaYlos;
     }
     
-    private void paivitaJalkaYY() {
-        
-        
-    }
+    
     
   
     
@@ -82,10 +79,7 @@ public class Hahmo {
         aktiivinenKuva=kuvaOikea;
     }
     
-     private void paivitaJalkaXX() {
-        
-        aktiivinenKuva=kuvaVasen;
-     }
+   
 
     
     public BufferedImage getAktiivinenKuva() {
