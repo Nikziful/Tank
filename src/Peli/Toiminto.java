@@ -1,5 +1,5 @@
 package Peli;
 
 public enum Toiminto {
-    VASEN,OIKEA,YLOS,ALAS,TYHJA
+    VASEN,OIKEA,YLOS,ALAS,MENU,TYHJA
 }

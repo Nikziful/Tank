@@ -25,6 +25,8 @@ public class PeliIkkuna extends JFrame {
             }
         });
     }
+    
+
     public static void main(String[] args) {
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             @Override
@@ -34,6 +36,7 @@ public class PeliIkkuna extends JFrame {
                 nappaimisto.lisaaNappain(KeyEvent.VK_A, Toiminto.VASEN);
                 nappaimisto.lisaaNappain(KeyEvent.VK_W, Toiminto.YLOS);
                 nappaimisto.lisaaNappain(KeyEvent.VK_S, Toiminto.ALAS);
+                nappaimisto.lisaaNappain(KeyEvent.VK_ESCAPE, Toiminto.MENU);
                 //nappaimisto.lisaaNappain(KeyEvent.VK_Q, Toiminto.AMPUU);
                 //nappaimisto.lisaaNappain(KeyEvent.VK_E, Toiminto.AMPUU);
                 new PeliIkkuna(nappaimisto).setVisible(true);
