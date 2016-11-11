@@ -51,10 +51,10 @@ public class Pelipaneeli extends JPanel{
     }
         public void suoritaToiminto2(Toiminto toiminto) {
         switch(toiminto) {
-            case ALAS:siirryY(10);break;
-            case YLOS:siirryY(-10);break;
-            case VASEN:siirryX(-10);break;
-            case OIKEA:siirryX(10);break;
+            case DOWN:siirryY(10);break;
+            case UP:siirryY(-10);break;
+            case LEFT:siirryX(-10);break;
+            case RIGHT:siirryX(10);break;
         };
     }
     
