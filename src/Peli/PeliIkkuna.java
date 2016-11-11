@@ -9,6 +9,7 @@ public class PeliIkkuna extends JFrame {
 
     private final Pelipaneeli paneeli = new Pelipaneeli();
     private Nappainkonfiguraatio nappaimisto;
+    private Nappainkonfiguraatio nappaimisto2;
     
 
     PeliIkkuna(Nappainkonfiguraatio nappis) {
@@ -26,24 +27,29 @@ public class PeliIkkuna extends JFrame {
         });
     }
     
+    
 
     public static void main(String[] args) {
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
                 Nappainkonfiguraatio nappaimisto=new Nappainkonfiguraatio();
+                Nappainkonfiguraatio nappaimisto2=new Nappainkonfiguraatio();
                 nappaimisto.lisaaNappain(KeyEvent.VK_D, Toiminto.OIKEA);
                 nappaimisto.lisaaNappain(KeyEvent.VK_A, Toiminto.VASEN);
                 nappaimisto.lisaaNappain(KeyEvent.VK_W, Toiminto.YLOS);
                 nappaimisto.lisaaNappain(KeyEvent.VK_S, Toiminto.ALAS);
+                
                 nappaimisto.lisaaNappain(KeyEvent.VK_ESCAPE, Toiminto.MENU);
-                nappaimisto.lisaaNappain(KeyEvent.VK_RIGHT, Toiminto.OIKEA);
-                nappaimisto.lisaaNappain(KeyEvent.VK_LEFT, Toiminto.VASEN);
-                nappaimisto.lisaaNappain(KeyEvent.VK_UP, Toiminto.YLOS);
-                nappaimisto.lisaaNappain(KeyEvent.VK_DOWN, Toiminto.ALAS);
+                
+                nappaimisto2.lisaaNappain(KeyEvent.VK_RIGHT, Toiminto.RIGHT);
+                nappaimisto2.lisaaNappain(KeyEvent.VK_LEFT, Toiminto.LEFT);
+                nappaimisto2.lisaaNappain(KeyEvent.VK_UP, Toiminto.UP);
+                nappaimisto2.lisaaNappain(KeyEvent.VK_DOWN, Toiminto.DOWN);
                 //nappaimisto.lisaaNappain(KeyEvent.VK_Q, Toiminto.AMPUU);
                 //nappaimisto.lisaaNappain(KeyEvent.VK_E, Toiminto.AMPUU);
                 new PeliIkkuna(nappaimisto).setVisible(true);
+                
             }
         });
     }

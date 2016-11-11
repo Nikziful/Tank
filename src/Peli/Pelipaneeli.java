@@ -36,11 +36,20 @@ public class Pelipaneeli extends JPanel{
             g2.fill(este);
         }
        g2.drawImage(pelihahmo.getAktiivinenKuva(),(int)pelihahmo.getX(), (int)pelihahmo.getY(),this); 
-       g2.drawImage(pelihahmo2.getAktiivinenKuva(),(int)pelihahmo2.getX(), (int)pelihahmo2.getY(),this);
+       g2.drawImage(pelihahmo2.getAktiivinenKuva(),(int)pelihahmo2.getX(), (int)pelihahmo2.getY(),this); 
     }
     
     
+    
     public void suoritaToiminto(Toiminto toiminto) {
+        switch(toiminto) {
+            case ALAS:siirryY(10);break;
+            case YLOS:siirryY(-10);break;
+            case VASEN:siirryX(-10);break;
+            case OIKEA:siirryX(10);break;
+        };
+    }
+        public void suoritaToiminto2(Toiminto toiminto) {
         switch(toiminto) {
             case ALAS:siirryY(10);break;
             case YLOS:siirryY(-10);break;
