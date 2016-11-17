@@ -9,7 +9,6 @@ public class PeliIkkuna extends JFrame {
 
     private final Pelipaneeli paneeli = new Pelipaneeli();
     private Nappainkonfiguraatio nappaimisto;
-    private Nappainkonfiguraatio nappaimisto2;
     
 
     PeliIkkuna(Nappainkonfiguraatio nappis) {
@@ -18,6 +17,7 @@ public class PeliIkkuna extends JFrame {
         this.setSize(796, 698);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
 
         this.addKeyListener(new KeyAdapter() {
             @Override
@@ -34,7 +34,6 @@ public class PeliIkkuna extends JFrame {
             @Override
             public void run() {
                 Nappainkonfiguraatio nappaimisto=new Nappainkonfiguraatio();
-                Nappainkonfiguraatio nappaimisto2=new Nappainkonfiguraatio();
                 nappaimisto.lisaaNappain(KeyEvent.VK_D, Toiminto.OIKEA);
                 nappaimisto.lisaaNappain(KeyEvent.VK_A, Toiminto.VASEN);
                 nappaimisto.lisaaNappain(KeyEvent.VK_W, Toiminto.YLOS);
@@ -42,12 +41,12 @@ public class PeliIkkuna extends JFrame {
                 
                 nappaimisto.lisaaNappain(KeyEvent.VK_ESCAPE, Toiminto.MENU);
                 
-                nappaimisto2.lisaaNappain(KeyEvent.VK_NUMPAD6, Toiminto.RIGHT);
-                nappaimisto2.lisaaNappain(KeyEvent.VK_NUMPAD4, Toiminto.LEFT);
-                nappaimisto2.lisaaNappain(KeyEvent.VK_NUMPAD8, Toiminto.UP);
-                nappaimisto2.lisaaNappain(KeyEvent.VK_NUMPAD5, Toiminto.DOWN);
-                //nappaimisto.lisaaNappain(KeyEvent.VK_Q, Toiminto.AMPUU);
-                //nappaimisto.lisaaNappain(KeyEvent.VK_E, Toiminto.AMPUU);
+                nappaimisto.lisaaNappain(KeyEvent.VK_NUMPAD6, Toiminto.RIGHT);
+                nappaimisto.lisaaNappain(KeyEvent.VK_NUMPAD4, Toiminto.LEFT);
+                nappaimisto.lisaaNappain(KeyEvent.VK_NUMPAD8, Toiminto.UP);
+                nappaimisto.lisaaNappain(KeyEvent.VK_NUMPAD5, Toiminto.DOWN);
+//                nappaimisto.lisaaNappain(KeyEvent.VK_Q, Toiminto.AMPUU);
+//                nappaimisto.lisaaNappain(KeyEvent.VK_E, Toiminto.AMPUU);
                 new PeliIkkuna(nappaimisto).setVisible(true);
                 
             }

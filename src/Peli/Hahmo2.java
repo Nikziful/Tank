@@ -6,14 +6,14 @@ import java.awt.image.BufferedImage;
 
 
 public class Hahmo2 {
-    private double x=0;
-    private double y=0;    
+    private double x=758;
+    private double y=646;    
 
-    private BufferedImage kuvaVasen=Kuvavarasto.getKuva("TankLeft");
     private BufferedImage kuvaOikea=Kuvavarasto.getKuva("TankRight");
+    private BufferedImage kuvaVasen=Kuvavarasto.getKuva("TankLeft");
     private BufferedImage kuvaYlos=Kuvavarasto.getKuva("TankUp");
     private BufferedImage kuvaAlas=Kuvavarasto.getKuva("TankDown");
-    private BufferedImage aktiivinenKuva=kuvaOikea;
+    private BufferedImage aktiivinenKuva=kuvaVasen;
     
     private boolean oikeaJalka=true;
     private boolean ylosJalka=true;
@@ -44,13 +44,7 @@ public class Hahmo2 {
         else {
             aktiivinenKuva=kuvaAlas;
         }
-    }
-    
-
-    
-    
-    
-    
+    }  
     public void paivitaX(double dx) {
         this.x+=dx;
         
@@ -68,14 +62,7 @@ public class Hahmo2 {
         
         aktiivinenKuva=kuvaYlos;
     }
-    
-    private void paivitaJalkaYY() {
-        
-        
-    }
-    
   
-    
     
     private void paivitaJalkaX() {
        

@@ -26,7 +26,7 @@ public class Pelipaneeli extends JPanel{
                            new Rectangle2D.Double(390,150,15,250)
     };
     private Paint estevari=Color.DARK_GRAY;
- 
+
     @Override
     protected void paintComponent(Graphics g) {
         super.paintComponent(g);
@@ -47,16 +47,13 @@ public class Pelipaneeli extends JPanel{
             case YLOS:siirryY(-10);break;
             case VASEN:siirryX(-10);break;
             case OIKEA:siirryX(10);break;
+            case DOWN:moveY(10);break;
+            case UP:moveY(-10);break;
+            case LEFT:moveX(-10);break;
+            case RIGHT:moveX(10);break;
         };
     }
-        public void suoritaToiminto2(Toiminto toiminto) {
-        switch(toiminto) {
-            case DOWN:siirryY(10);break;
-            case UP:siirryY(-10);break;
-            case LEFT:siirryX(-10);break;
-            case RIGHT:siirryX(10);break;
-        };
-    }
+
     
     
    public void siirryY(int dy) {
@@ -84,7 +81,8 @@ public class Pelipaneeli extends JPanel{
         pelihahmo.paivitaX(dx);
         repaint();
     }
-    public void siirtyyY(int dy) {
+    
+    public void moveY(int dy) {
         pelihahmo2.setY(pelihahmo2.getY()+dy);
         for(Shape este:esteet) {
             if(este.intersects(pelihahmo2.getEnnakoivaNelio(0,dy).getBounds2D())) {
@@ -97,7 +95,7 @@ public class Pelipaneeli extends JPanel{
         repaint();
     }
     
-    public void siirtyyX(int dx){
+    public void moveX(int dx){
         pelihahmo2.setX(pelihahmo2.getX()+dx);
         for(Shape este:esteet) {
             if(este.intersects(pelihahmo2.getEnnakoivaNelio(dx,0).getBounds2D())){
