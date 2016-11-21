@@ -80,21 +80,7 @@ public class Menu extends JFrame {
         
         pelaaNappi.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                Nappainkonfiguraatio nappaimisto=new Nappainkonfiguraatio();
-                nappaimisto.lisaaNappain(KeyEvent.VK_D, Toiminto.OIKEA);
-                nappaimisto.lisaaNappain(KeyEvent.VK_A, Toiminto.VASEN);
-                nappaimisto.lisaaNappain(KeyEvent.VK_W, Toiminto.YLOS);
-                nappaimisto.lisaaNappain(KeyEvent.VK_S, Toiminto.ALAS);
-                
-                nappaimisto.lisaaNappain(KeyEvent.VK_ESCAPE, Toiminto.MENU);
-                
-                nappaimisto.lisaaNappain(KeyEvent.VK_NUMPAD6, Toiminto.RIGHT);
-                nappaimisto.lisaaNappain(KeyEvent.VK_NUMPAD4, Toiminto.LEFT);
-                nappaimisto.lisaaNappain(KeyEvent.VK_NUMPAD8, Toiminto.UP);
-                nappaimisto.lisaaNappain(KeyEvent.VK_NUMPAD5, Toiminto.DOWN);
-//                nappaimisto.lisaaNappain(KeyEvent.VK_Q, Toiminto.AMPUU);
-//                nappaimisto.lisaaNappain(KeyEvent.VK_E, Toiminto.AMPUU);
-                new PeliIkkuna(nappaimisto).setVisible(true);
+                new Maps().setVisible(true);
                 dispose();
             }
         });
