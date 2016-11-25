@@ -14,4 +14,5 @@ public class Nappainkonfiguraatio {
         if(!nappaimet.containsKey(nappainkoodi)) return Toiminto.TYHJA;
         return nappaimet.get(nappainkoodi);
     }
+    
 }

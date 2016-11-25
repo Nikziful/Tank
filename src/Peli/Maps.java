@@ -12,13 +12,14 @@ public class Maps extends JFrame {
     JPanel pohjapaneeli = new JPanel();
 
     JButton map1 = new JButton();
-    JButton map2 = new JButton();
-    JButton map3 = new JButton();
+    JButton map2 = new JButton("Tulossa pian!");
+    JButton map3 = new JButton("Tulossa pian!");
 
     public Maps() {
         
-        ImageIcon map = new ImageIcon(getClass().getResource("map1.png"));
-        map1 = new JButton (map);
+        ImageIcon mapp1 = new ImageIcon(getClass().getResource("map1.png"));
+        map1 = new JButton (mapp1);
+
         
         GroupLayout layout = new GroupLayout(pohjapaneeli);
         pohjapaneeli.setLayout(layout);

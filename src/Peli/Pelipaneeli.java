@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Paint;
 import java.awt.Shape;
+import java.awt.event.KeyEvent;
 import java.awt.geom.Rectangle2D;
 
 import javax.swing.JPanel;
@@ -20,7 +21,7 @@ public class Pelipaneeli extends JPanel{
                            new Rectangle2D.Double(789,0,1,700), //right
                            new Rectangle2D.Double(50,0,25,80), //vasen ylä este
                            new Rectangle2D.Double(200,75,350,25), //ylä keski este
-                           new Rectangle2D.Double(700,580,25,80), //ala oikea este =))
+                           new Rectangle2D.Double(700,590,25,80), //ala oikea este =))
                            new Rectangle2D.Double(200,580,350,25), //ala keski este
                            new Rectangle2D.Double(280,280,250,15), //keski
                            new Rectangle2D.Double(390,150,15,250)
@@ -38,7 +39,6 @@ public class Pelipaneeli extends JPanel{
        g2.drawImage(pelihahmo.getAktiivinenKuva(),(int)pelihahmo.getX(), (int)pelihahmo.getY(),this); 
        g2.drawImage(pelihahmo2.getAktiivinenKuva(),(int)pelihahmo2.getX(), (int)pelihahmo2.getY(),this); 
     }
-    
     
     
     public void suoritaToiminto(Toiminto toiminto) {

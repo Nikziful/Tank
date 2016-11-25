@@ -9,10 +9,10 @@ public class Hahmo2 {
     private double x=758;
     private double y=646;    
 
-    private BufferedImage kuvaOikea=Kuvavarasto.getKuva("TankRight");
-    private BufferedImage kuvaVasen=Kuvavarasto.getKuva("TankLeft");
-    private BufferedImage kuvaYlos=Kuvavarasto.getKuva("TankUp");
-    private BufferedImage kuvaAlas=Kuvavarasto.getKuva("TankDown");
+    private BufferedImage kuvaOikea=Kuvavarasto.getKuva("TankRight2");
+    private BufferedImage kuvaVasen=Kuvavarasto.getKuva("TankLeft2");
+    private BufferedImage kuvaYlos=Kuvavarasto.getKuva("TankUp2");
+    private BufferedImage kuvaAlas=Kuvavarasto.getKuva("TankDown2");
     private BufferedImage aktiivinenKuva=kuvaVasen;
     
     private boolean oikeaJalka=true;
