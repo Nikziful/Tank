@@ -1,9 +1,10 @@
 package Peli;
 
+import Peli.Kuvavarasto;
 import java.awt.Shape;
 import java.awt.geom.Rectangle2D;
 import java.awt.image.BufferedImage;
-
+import Peli.Kuvavarasto;
 
 public class Hahmo2 {
     private double x=758;

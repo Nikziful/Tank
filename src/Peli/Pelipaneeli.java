@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 public class Pelipaneeli extends JPanel{
    private Hahmo pelihahmo=new Hahmo();
    private Hahmo2 pelihahmo2=new Hahmo2();
+   
     
                                                 //X, Y, koko  
    private Shape[] esteet={new Rectangle2D.Double(0,-10,800,1), //top
