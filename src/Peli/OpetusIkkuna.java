@@ -20,14 +20,14 @@ public class OpetusIkkuna extends JFrame{
     private JLabel r2=new JLabel("down 's'");
     private JLabel r3=new JLabel("left 'a'");
     private JLabel r4=new JLabel("right 'd'");
-    private JLabel r5=new JLabel("shoot 'q/e'");
+    private JLabel r5=new JLabel("shoot 'space'");
     
     private JLabel pelaaja2=new JLabel("player 2:");
     private JLabel l1=new JLabel("up 'numpad 8'");
     private JLabel l2=new JLabel("down 'numpad 5'");
     private JLabel l3=new JLabel("left 'numpad 4'");
     private JLabel l4=new JLabel("right 'numpad 6'");
-    private JLabel l5=new JLabel("shoot 'numpad 7/9");
+    private JLabel l5=new JLabel("shoot 'numpad 0");
     
     private JButton takasNappi=new JButton("Back");
     

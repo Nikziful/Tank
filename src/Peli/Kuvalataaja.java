@@ -13,7 +13,7 @@ public class Kuvalataaja {
             Kuvavarasto.lisaaKuva("TankLeft2", ImageIO.read(getClass().getResourceAsStream(("TankLeft2.png"))));
             Kuvavarasto.lisaaKuva("TankRight2", ImageIO.read(getClass().getResourceAsStream(("TankRight2.png"))));
             Kuvavarasto.lisaaKuva("TankUp2", ImageIO.read(getClass().getResourceAsStream(("TankUp2.png"))));
-            Kuvavarasto.lisaaKuva("luoti", ImageIO.read(getClass().getResourceAsStream(("luoti.ai"))));
+            Kuvavarasto.lisaaKuva("luoti", ImageIO.read(getClass().getResourceAsStream(("luoti.png"))));
         }
         catch(Exception e){
             e.printStackTrace();
