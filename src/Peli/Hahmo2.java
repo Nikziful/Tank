@@ -7,8 +7,8 @@ import java.awt.image.BufferedImage;
 import Peli.Kuvavarasto;
 
 public class Hahmo2 {
-    private double x=758;
-    private double y=646;    
+    private double x=740;
+    private double y=640;    
 
     private BufferedImage kuvaOikea=Kuvavarasto.getKuva("TankRight2");
     private BufferedImage kuvaVasen=Kuvavarasto.getKuva("TankLeft2");
