@@ -58,8 +58,11 @@ public class Menu extends JFrame {
 
         GroupLayout.SequentialGroup baseY = layout.createSequentialGroup();
         baseY.addGroup(topRowY);
+        baseY.addGap(10);
         baseY.addGroup(midRowY);
+        baseY.addGap(10);
         baseY.addGroup(botRowY);
+        baseY.addGap(10);
         baseY.addGroup(lowRowY);
 
         layout.setVerticalGroup(baseY);
@@ -70,6 +73,7 @@ public class Menu extends JFrame {
         this.pack();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
+        pohjapaneeli.setBackground(Color.ORANGE);
 
         asetuksetNappi.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {

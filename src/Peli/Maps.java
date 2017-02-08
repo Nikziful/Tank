@@ -1,5 +1,6 @@
 package Peli;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
@@ -11,15 +12,15 @@ public class Maps extends JFrame {
     JPanel pohjapaneeli = new JPanel();
 
     JButton map1 = new JButton();
-    JButton map2 = new JButton("Tulossa pian!");
+    JButton map2 = new JButton();
     JButton map3 = new JButton("Tulossa pian!");
+    JButton back = new JButton("Back");
 
     public Maps() {
-        
-        ImageIcon mapp1 = new ImageIcon(getClass().getResource("map1.png"));
-        map1 = new JButton (mapp1);
 
-        
+        ImageIcon mapp1 = new ImageIcon(getClass().getResource("map1.png"));
+        map1 = new JButton(mapp1);
+
         GroupLayout layout = new GroupLayout(pohjapaneeli);
         pohjapaneeli.setLayout(layout);
 
@@ -34,10 +35,15 @@ public class Maps extends JFrame {
         GroupLayout.SequentialGroup botRowX = layout.createSequentialGroup();
         botRowX.addComponent(map3, 200, 200, 200);
 
+        GroupLayout.SequentialGroup lowRowX = layout.createSequentialGroup();
+        lowRowX.addGap(137);
+        lowRowX.addComponent(back);
+
         GroupLayout.ParallelGroup baseX = layout.createParallelGroup();
         baseX.addGroup(topRowX);
         baseX.addGroup(midRowX);
         baseX.addGroup(botRowX);
+        baseX.addGroup(lowRowX);
 
         layout.setHorizontalGroup(baseX);
 
@@ -50,11 +56,18 @@ public class Maps extends JFrame {
         GroupLayout.ParallelGroup botRowY = layout.createParallelGroup();
         botRowY.addComponent(map3, 100, 100, 100);
 
+        GroupLayout.ParallelGroup lowRowY = layout.createParallelGroup();
+        lowRowY.addComponent(back);
+
         GroupLayout.SequentialGroup baseY = layout.createSequentialGroup();
         baseY.addGap(10);
         baseY.addGroup(topRowY);
+        baseY.addGap(10);
         baseY.addGroup(midRowY);
+        baseY.addGap(10);
         baseY.addGroup(botRowY);
+        baseY.addGap(10);
+        baseY.addGroup(lowRowY);
 
         layout.setVerticalGroup(baseY);
 
@@ -64,7 +77,8 @@ public class Maps extends JFrame {
         this.pack();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
-        
+
+        pohjapaneeli.setBackground(Color.ORANGE);
 
         map1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -86,6 +100,35 @@ public class Maps extends JFrame {
                 dispose();
             }
 
+        });
+
+        map2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                Nappainkonfiguraatio nappaimisto = new Nappainkonfiguraatio();
+                nappaimisto.lisaaNappain(KeyEvent.VK_D, Toiminto.OIKEA);
+                nappaimisto.lisaaNappain(KeyEvent.VK_A, Toiminto.VASEN);
+                nappaimisto.lisaaNappain(KeyEvent.VK_W, Toiminto.YLOS);
+                nappaimisto.lisaaNappain(KeyEvent.VK_S, Toiminto.ALAS);
+
+                nappaimisto.lisaaNappain(KeyEvent.VK_ESCAPE, Toiminto.MENU);
+
+                nappaimisto.lisaaNappain(KeyEvent.VK_NUMPAD6, Toiminto.RIGHT);
+                nappaimisto.lisaaNappain(KeyEvent.VK_NUMPAD4, Toiminto.LEFT);
+                nappaimisto.lisaaNappain(KeyEvent.VK_NUMPAD8, Toiminto.UP);
+                nappaimisto.lisaaNappain(KeyEvent.VK_NUMPAD5, Toiminto.DOWN);
+//                nappaimisto.lisaaNappain(KeyEvent.VK_Q, Toiminto.AMPUU);
+//                nappaimisto.lisaaNappain(KeyEvent.VK_E, Toiminto.AMPUU);
+                new PeliIkkuna2(nappaimisto).setVisible(true);
+                dispose();
+            }
+
+        });
+
+        back.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                new Menu().setVisible(true);
+                dispose();
+            }
         });
 
     }

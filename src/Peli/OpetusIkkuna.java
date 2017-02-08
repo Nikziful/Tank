@@ -1,5 +1,6 @@
 package Peli;
 
+import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -54,7 +55,7 @@ public class OpetusIkkuna extends JFrame{
         
         GroupLayout.SequentialGroup lowerBotSideBySideGroupX = layout.createSequentialGroup();
         lowerBotSideBySideGroupX.addComponent(r2);
-        lowerBotSideBySideGroupX.addGap(67);
+        lowerBotSideBySideGroupX.addGap(68);
         lowerBotSideBySideGroupX.addComponent(l2);
         
         GroupLayout.SequentialGroup thirdBotSideBySideGroupX = layout.createSequentialGroup();
@@ -69,7 +70,7 @@ public class OpetusIkkuna extends JFrame{
         
         GroupLayout.SequentialGroup fifthBotSideBySideGroupX = layout.createSequentialGroup();
         fifthBotSideBySideGroupX.addComponent(r5);
-        fifthBotSideBySideGroupX.addGap(56);
+        fifthBotSideBySideGroupX.addGap(38);
         fifthBotSideBySideGroupX.addComponent(l5);
         
         GroupLayout.SequentialGroup sixthBotSideGroupX = layout.createSequentialGroup();
@@ -145,6 +146,7 @@ public class OpetusIkkuna extends JFrame{
         this.pack();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
+        pohjapaneeli.setBackground(Color.orange);
     
         takasNappi.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {

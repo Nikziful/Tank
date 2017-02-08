@@ -1,5 +1,6 @@
 package Peli;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -59,8 +60,11 @@ public class AsetuksetIkkuna extends JFrame{
         GroupLayout.SequentialGroup baseY = layout.createSequentialGroup();
         baseY.addGap(10);
         baseY.addGroup(topRowY);
+        baseY.addGap(10);
         baseY.addGroup(midRowY);
+        baseY.addGap(10);
         baseY.addGroup(botRowY);
+        baseY.addGap(10);
         baseY.addGroup(lowestRowY);
 
         layout.setVerticalGroup(baseY);
@@ -71,6 +75,7 @@ public class AsetuksetIkkuna extends JFrame{
         this.pack();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
+        pohjapaneeli.setBackground(Color.ORANGE);
     
         takasNappi.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {

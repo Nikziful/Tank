@@ -6,20 +6,20 @@ import java.awt.event.KeyEvent;
 import javax.swing.JFrame;
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
-public class PeliIkkuna extends JFrame {
+public class PeliIkkuna2 extends JFrame {
 
-    private final Pelipaneeli paneeli = new Pelipaneeli();
+    private final Pelipaneeli2 paneeli = new Pelipaneeli2();
     private Nappainkonfiguraatio nappaimisto;
     
 
-    PeliIkkuna(Nappainkonfiguraatio nappis) {
+    PeliIkkuna2(Nappainkonfiguraatio nappis) {
         this.nappaimisto = nappis;
         this.add(paneeli);
         this.setSize(796, 698);
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
         this.setResizable(false);
-        paneeli.setBackground(Color.white);
+        paneeli.setBackground(Color.WHITE);
 
         this.addKeyListener(new KeyAdapter() {
             @Override
@@ -49,7 +49,7 @@ public class PeliIkkuna extends JFrame {
                 nappaimisto.lisaaNappain(KeyEvent.VK_NUMPAD8, Toiminto.UP);
                 nappaimisto.lisaaNappain(KeyEvent.VK_NUMPAD5, Toiminto.DOWN);
                 nappaimisto.lisaaNappain(KeyEvent.VK_SPACE, Toiminto.SHOOT);
-                new PeliIkkuna(nappaimisto).setVisible(true);
+                new PeliIkkuna2(nappaimisto).setVisible(true);
                 
             }
         });

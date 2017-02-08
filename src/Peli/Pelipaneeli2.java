@@ -10,23 +10,24 @@ import java.awt.geom.Rectangle2D;
 
 import javax.swing.JPanel;
 
-public class Pelipaneeli extends JPanel{
+public class Pelipaneeli2 extends JPanel{
    private Hahmo pelihahmo=new Hahmo();
    private Hahmo2 pelihahmo2=new Hahmo2();
    
-   
+  
     
                                                 //X, Y, koko  
    private Shape[] esteet={new Rectangle2D.Double(0,-10,800,1), //top
                            new Rectangle2D.Double(-10,0,1,700),  //left
                            new Rectangle2D.Double(0,669,800,1), //bot
                            new Rectangle2D.Double(789,0,1,700), //right
-                           new Rectangle2D.Double(50,0,25,80), //vasen ylä este
-                           new Rectangle2D.Double(200,75,350,25), //ylä keski este
-                           new Rectangle2D.Double(700,590,25,80), //ala oikea este =))
-                           new Rectangle2D.Double(200,580,350,25), //ala keski este
-                           new Rectangle2D.Double(280,280,250,15), //keski
-                           new Rectangle2D.Double(390,150,15,250)
+                           new Rectangle2D.Double(50,0,25,80), //vasen ylä este!
+                           new Rectangle2D.Double(700,590,25,80), //oikea ala este!
+                           new Rectangle2D.Double(160,105,470,25), // ylä,keski
+                           new Rectangle2D.Double(160,530,470,25), // ala,keski
+                           new Rectangle2D.Double(605,380,25,150),  //ala,ylös
+                           new Rectangle2D.Double(160,130,25,150) //ylä, alas
+                          
     };
     private Paint estevari=Color.black;
     
