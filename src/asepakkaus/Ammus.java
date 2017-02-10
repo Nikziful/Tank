@@ -54,6 +54,12 @@ public abstract class Ammus {
     public Shape getYmparoivaNelio() {
         return new Rectangle2D.Double(sarake,rivi,getKuva().getHeight(), getKuva().getWidth());
     } 
+
+    @Override
+    public String toString() {
+        return "Ammus{" + "rivi=" + rivi + ", sarake=" + sarake + ", nopeus=" + nopeus + ", suuntaKulma=" + suuntaKulma + ", ammuksenElinIka=" + ammuksenElinIka + '}';
+    }
+    
     
     
     public abstract BufferedImage getKuva();

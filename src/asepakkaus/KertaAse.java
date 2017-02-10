@@ -1,5 +1,6 @@
 package asepakkaus;
 
+import Peli.Kuvavarasto;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -12,11 +13,10 @@ public class KertaAse extends Ase{
     private BufferedImage kuva;
        
     public KertaAse() {
-        try {
-            kuva=ImageIO.read(new File("luoti.png"));
-        } catch (IOException ex) {
-            
-        }
+        
+            kuva=Kuvavarasto.getKuva("luoti");
+        
+           
     }
     
     @Override

@@ -27,9 +27,6 @@ public class Hahmo2 {
     private boolean vasenJalka = true;
     private Ase tykki = new KertaAse();
 
-    public List<Ammus> getAmmukset() {
-        return tykki.getAmmukset();
-    }
 
     public double getX() {
         return x;
@@ -52,17 +49,20 @@ public class Hahmo2 {
         tykki.setRivi(this.y);
         if (dy < 0) {
             aktiivinenKuva = kuvaYlos;
-            tykki.setAseenSuuntaAsteina(270);
+            tykki.setAseenSuuntaAsteina(90);
         } else {
             aktiivinenKuva = kuvaAlas;
-            tykki.setAseenSuuntaAsteina(90);
+            tykki.setAseenSuuntaAsteina(270);
         }
+    }
+    
+    public List<Ammus> getAmmukset() {
+        return tykki.getAmmukset();
     }
 
     public void paivitaX(double dx) {
         this.x += dx;
         tykki.setRivi(this.x);
-
         if (dx < 0) {
             aktiivinenKuva = kuvaVasen;
             tykki.setAseenSuuntaAsteina(180);
@@ -82,10 +82,6 @@ public class Hahmo2 {
         aktiivinenKuva = kuvaOikea;
     }
 
-    private void paivitaJalkaXX() {
-
-        aktiivinenKuva = kuvaVasen;
-    }
 
     public BufferedImage getAktiivinenKuva() {
         return aktiivinenKuva;
