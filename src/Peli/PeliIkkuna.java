@@ -40,7 +40,7 @@ public class PeliIkkuna extends JFrame {
                 nappaimisto.lisaaNappain(KeyEvent.VK_A, Toiminto.VASEN);
                 nappaimisto.lisaaNappain(KeyEvent.VK_W, Toiminto.YLOS);
                 nappaimisto.lisaaNappain(KeyEvent.VK_S, Toiminto.ALAS);
-                nappaimisto.lisaaNappain(KeyEvent.VK_Q, Toiminto.AMPUU);
+                nappaimisto.lisaaNappain(KeyEvent.VK_SPACE, Toiminto.AMPUU);
                 
                 nappaimisto.lisaaNappain(KeyEvent.VK_ESCAPE, Toiminto.MENU);
                 
@@ -48,7 +48,7 @@ public class PeliIkkuna extends JFrame {
                 nappaimisto.lisaaNappain(KeyEvent.VK_NUMPAD4, Toiminto.LEFT);
                 nappaimisto.lisaaNappain(KeyEvent.VK_NUMPAD8, Toiminto.UP);
                 nappaimisto.lisaaNappain(KeyEvent.VK_NUMPAD5, Toiminto.DOWN);
-                nappaimisto.lisaaNappain(KeyEvent.VK_SPACE, Toiminto.SHOOT);
+                nappaimisto.lisaaNappain(KeyEvent.VK_NUMPAD0, Toiminto.SHOOT);
                 new PeliIkkuna(nappaimisto).setVisible(true);
                 
             }

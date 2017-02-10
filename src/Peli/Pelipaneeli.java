@@ -1,5 +1,6 @@
 package Peli;
 
+import asepakkaus.Ammus;
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -7,12 +8,15 @@ import java.awt.Paint;
 import java.awt.Shape;
 import java.awt.event.KeyEvent;
 import java.awt.geom.Rectangle2D;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.swing.JPanel;
 
 public class Pelipaneeli extends JPanel{
    private Hahmo pelihahmo=new Hahmo();
    private Hahmo2 pelihahmo2=new Hahmo2();
+   private List<Ammus> ammukset=new ArrayList<Ammus>();
    
    
     
@@ -39,6 +43,11 @@ public class Pelipaneeli extends JPanel{
         for(Shape este:esteet) {
             g2.fill(este);
         }
+       for(Ammus kuula:ammukset) {
+           kuula.paivitaPaikka(0, -1);
+           g2.drawImage(kuula.getKuva(), (int)kuula.getSarake(), (int)kuula.getRivi(), this);
+       }
+        System.out.println(ammukset);
        g2.drawImage(pelihahmo.getAktiivinenKuva(),(int)pelihahmo.getX(), (int)pelihahmo.getY(),this); 
        g2.drawImage(pelihahmo2.getAktiivinenKuva(),(int)pelihahmo2.getX(), (int)pelihahmo2.getY(),this); 
     }
@@ -54,10 +63,18 @@ public class Pelipaneeli extends JPanel{
             case UP:moveY(-10);break;
             case LEFT:moveX(-10);break;
             case RIGHT:moveX(10);break;
+            case AMPUU:ammuhahmo();System.out.println("ampuu");break;
+            case SHOOT:ammuhahmo2();System.out.println("shoot");
         };
     }
 
+    private void ammuhahmo () {
+        ammukset.addAll(pelihahmo.getAmmukset());System.out.println(ammukset);
+    }
     
+    private void ammuhahmo2 () {
+        ammukset.addAll(pelihahmo2.getAmmukset());System.out.println(ammukset);
+    }
     
    public void siirryY(int dy) {
         pelihahmo.setY(pelihahmo.getY()+dy);
