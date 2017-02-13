@@ -62,7 +62,7 @@ public class Hahmo2 {
 
     public void paivitaX(double dx) {
         this.x += dx;
-        tykki.setRivi(this.x);
+        tykki.setSarake(this.x);
         if (dx < 0) {
             aktiivinenKuva = kuvaVasen;
             tykki.setAseenSuuntaAsteina(180);

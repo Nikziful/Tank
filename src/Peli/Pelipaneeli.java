@@ -6,7 +6,6 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Paint;
 import java.awt.Shape;
-import java.awt.event.KeyEvent;
 import java.awt.geom.Rectangle2D;
 import java.util.ArrayList;
 import java.util.List;
@@ -76,6 +75,17 @@ public class Pelipaneeli extends JPanel{
         ammukset.addAll(pelihahmo2.getAmmukset());System.out.println(ammukset);
     }
     
+//    public void luotiY(int sr) {
+//                ammukset.setRivi(ammukset.getRivi()+sr);
+//        for(Shape este:esteet) {
+//            if(este.intersects(ammukset.getEnnakoivaNelio(0,sr).getBounds2D())) {
+//                ammukset.setRivi(ammukset.getRivi()-sr);
+//                repaint();
+//                return;
+//            }
+//        }
+//    }
+
    public void siirryY(int dy) {
         pelihahmo.setY(pelihahmo.getY()+dy);
         for(Shape este:esteet) {

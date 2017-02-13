@@ -73,7 +73,7 @@ public class Menu extends JFrame {
         this.pack();
         this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         setResizable(false);
-        pohjapaneeli.setBackground(Color.ORANGE);
+        pohjapaneeli.setBackground(Color.orange);
 
         asetuksetNappi.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
